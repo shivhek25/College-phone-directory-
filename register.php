@@ -6,8 +6,7 @@
         $position = $_POST['position'];
         $phone_number = $_POST['phone_number'];
 				$email = $_POST['email'];
-
-        $query = "INSERT INTO `Info` (name, position, phone_number, email) VALUES ('$name', '$position', '$phone_number', '$email')";
+        $query = "INSERT INTO `Info` (name, position, phone_number, email) VALUES ('$name', '$position', $phone_number, '$email')";
         $result = mysqli_query($connection, $query);
         if($result){
             $smsg = "Information added successfully.";
@@ -78,7 +77,7 @@
 	              <input type="text" name="position" class="form-control" placeholder="Position" required>
 	          </div>
               <label for="inputNumber" class="sr-only">Phone number</label>
-              <input type="number" name="number" class="form-control" placeholder="Phone number" required autofocus>
+              <input type="number" name="phone_number" class="form-control" placeholder="Phone number" required autofocus>
               <label for="inputEmail" class="sr-only">Email address</label>
               <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
               <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
