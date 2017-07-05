@@ -3,7 +3,7 @@
  $sql="SELECT * FROM Info";
  $data = mysqli_query($connection, $sql) or trigger_error(mysql_error()." in ".$sql);;
  while($row = mysqli_fetch_assoc($data)){
-    echo "Name ".$row['name'].", Position:".$row['position'].", Phone Number:".$row['phone_number']
+    echo "Name: ".$row['name'].", Position:".$row['position'].", Phone Number:".$row['phone_number']
     .", Email Address:".$row['email']."<br/>";
     }
  ?>
@@ -14,17 +14,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-      .tabs{
-        margin: 1px solid red;
-      }
+    .header{
+      height:100px;
+      background-color: rgb(27,170,170);
+      color: white;
+      font-family: Arial;
+      font-size: 1.5em;
+    }
     </style>
   </head>
   <body>
-    <div class="col-md-12 tabs">
-      <div class="col-md-3">Name</div>
-      <div class="col-md-3">Position</div>
-      <div class="col-md-3">Phone Number</div>
-      <div class="col-md-3">Email</div>
+    <div class="header col-md-12 text-center">
+      <img style="margin-top:5px" width="80px" src="http://nitdgp.ac.in/logo/logo.png"/>
+      NATIONAL INSTITUTE OF TECHNOLOGY, DURGAPUR
     </div>
   </body>
 </html>
