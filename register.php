@@ -7,7 +7,7 @@
         $phone_number = $_POST['phone_number'];
 				$email = $_POST['email'];
         $query = "INSERT INTO `Info` (name, position, phone_number, email) VALUES ('$name', '$position', $phone_number, '$email')";
-        $result = mysqli_query($connection, $query);
+        $result = mysqli_query($connection, $query) or trigger_error(mysql_error()." in ".$query);
         if($result){
             $smsg = "Information added successfully.";
         }else{
